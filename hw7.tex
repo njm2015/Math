@@ -16,6 +16,13 @@
 $x_n$ is bounded, so by the Bolzano-Weierstrass Theorem, $x_n$ has a convergent subsequence. This comes from the monotone subsquence theorem. We realize that we have 2 cases for $s_n$: \\
 \\
 1. $s_n$ is a constant sequence. \\
-In this case, because $\forall \hspace{1mm}k \in \mathbb{N}\hspace{1mm} \sup{x_k:\hspace{1mm}k>n}=L$
+In this case, because $\forall \hspace{1mm}k \in \mathbb{N}\hspace{1mm} \sup{x_k:\hspace{1mm}k>n}=L$ means that even after taking finitely many $x_i$ out of the sequence, that infinitely many $x_{k+i}$ are epsilon close to $s_n$, thus converging to $\inf{s_n}=s_n$. \\
+\\
+2. $s_n$ is a decreasing sequence. \\
+In this case, we can find a natural $k$ such that $s_k>s_{k+1}$. Now consider the $s_{k+1}$ tail of the squenece $s_n$. We can keep repeating this process and $s_n$ will converge because $s_n$ is decreasing and bounded. Once we find the limit of $s_n$, we know that infinitely many $x_n$ are epsilon close to the limit of $s_n$ (because of case 1), so we see that there is definitely a subsequence of $x_n$ which converges to the limit of $s_n$ which is $S$ (because $s_n$ is decreasing).
+
+\section*{3.5.2}
+\subsection*{a.}
+If $x_n=\big(\frac{n+1}{n}\big)$, show that $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} N_{\epsilon}\in\mathbb{N}:\hspace{1mm}n>N_{\epsilon} \Rightarrow|x_n-x_m|<\epsilon$.
 
 \end{document}
