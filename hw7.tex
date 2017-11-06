@@ -62,6 +62,27 @@ Show that $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} 
 We see that such $n$ exists due to the Archimedean property, so it follows that $\lim_{n\to\infty}|x_{n+1}-x_n|=0$. \\
 \\
 Claim: $x_n=\sqrt{n}$ is not Cauchy. \\
-Suppose that $x_n$ is Cauchy. Then $\forall \hspace{1mm}\epsilon > 0, \hspace{1mm}\exists\hspace{1mm} N_{\epsilon} \in \mathbb{N}: \hspace{1mm} n,m > N_{\epsilon} \Rightarrow |x_n-x_m| < \epsilon$
+Suppose that $x_n$ is Cauchy. Then $\forall \hspace{1mm}\epsilon > 0, \hspace{1mm}\exists\hspace{1mm} N_{\epsilon} \in \mathbb{N}: \hspace{1mm} n,m > N_{\epsilon} \Rightarrow |x_n-x_m| < \epsilon$. \\
+Fix $n > N_{\epsilon}$. We see that $\lim_{m\to\infty}\sqrt{m}=\infty$, so $\lim_{m\to\infty}|x_n-x_m| = |\sqrt{n}-\infty|=\infty < \epsilon$, a contradiction. Thus, $x_n=\sqrt{n}$ is not Cauchy.
+
+\section*{3.5.7}
+$x_n$ is Cauchy, so $\forall \hspace{1mm} \epsilon > 0 \hspace{1mm}\exists\hspace{1mm} N_{\epsilon} \in\mathbb{N}: \hspace{1mm} n,m > N_{\epsilon} \Rightarrow |x_n-x_m| < \epsilon$. \\
+Fix $\epsilon=1$. By the above definition, there exist $n,m\in\mathbb{N}$ usch that $|x_n-x_m| < \epsilon$. But $x_n$ and $x_m$ are both integers, and integer addition and subtraction always results in an integer, so $|x_n-x_m|<1 \Rightarrow x_n=x_m$, which means that $\forall \hspace{1mm} i>\min\{n,m\}$, the $x_i$ tail of the sequence is constant.
+
+\section*{3.7.3a}
+\[\frac{1}{(n+1)(n+2)}=\frac{A}{n+1}+\frac{B}{n+2}\Rightarrow 1 = A(n+2) + B(n+1)\]
+Let $n=-2$. Then:
+\[1=A(0)+B(-1) \Rightarrow B=-1\]
+Let $n=-1$. Then:
+\[1=A(1)+B(0)\Rightarrow A=1\]
+so $$\sum_{n=0}^{\infty} \frac{1}{(n+1)(n+2)}=\frac{A}{n+1}+\frac{B}{n+2}=\frac{1}{n+1}-\frac{1}{n+2}$$.
+\[\sum_{n=0}^{\infty}\frac{1}{n+1}-\frac{1}{n+2}=\left[1-\frac{1}{2}\right]+\left[\frac{1}{2}-\frac{1}{3}\right]+\left[\frac{1}{3}-\frac{1}{4}\right]+\ldots+\left[\frac{1}{n+1}-\frac{1}{n+2}\right]\]
+After canceling values, we observe that $\sum_{n=0}^{\infty}\frac{1}{n+1}-\frac{1}{n+2}=\left[1-\frac{1}{n+2}\right]$.
+\[\lim_{n\to\infty}\left[1-\frac{1}{n+2}\right]=1-0=1 \Rightarrow \sum_{n=0}^{\infty}\frac{1}{(n+1)(n+2)}=1\]
+
+\section*{3.7.5}
+No, because $\sum(x_n+y_n)=\sum x_n = \sum y_n$ and for $\sum(x_n+y_n)$ to be convergent, both $x_n$ and $y_n$ must be convergent. ($L + \infty = \infty$)
+
+
 
 \end{document}
