@@ -19,10 +19,49 @@ $x_n$ is bounded, so by the Bolzano-Weierstrass Theorem, $x_n$ has a convergent 
 In this case, because $\forall \hspace{1mm}k \in \mathbb{N}\hspace{1mm} \sup{x_k:\hspace{1mm}k>n}=L$ means that even after taking finitely many $x_i$ out of the sequence, that infinitely many $x_{k+i}$ are epsilon close to $s_n$, thus converging to $\inf{s_n}=s_n$. \\
 \\
 2. $s_n$ is a decreasing sequence. \\
-In this case, we can find a natural $k$ such that $s_k>s_{k+1}$. Now consider the $s_{k+1}$ tail of the squenece $s_n$. We can keep repeating this process and $s_n$ will converge because $s_n$ is decreasing and bounded. Once we find the limit of $s_n$, we know that infinitely many $x_n$ are epsilon close to the limit of $s_n$ (because of case 1), so we see that there is definitely a subsequence of $x_n$ which converges to the limit of $s_n$ which is $S$ (because $s_n$ is decreasing).
+In this case, we can find a natural $k$ such that $s_k>s_{k+1}$. Now consider the $s_{k+1}$ tail of the sequence $s_n$. We can keep repeating this process and $s_n$ will converge because $s_n$ is decreasing and bounded. Once we find the limit of $s_n$, we know that infinitely many $x_n$ are epsilon close to the limit of $s_n$ (because of case 1), so we see that there is definitely a subsequence of $x_n$ which converges to the limit of $s_n$ which is $S$ (because $s_n$ is decreasing).
 
 \section*{3.5.2}
 \subsection*{a.}
 If $x_n=\big(\frac{n+1}{n}\big)$, show that $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} N_{\epsilon}\in\mathbb{N}:\hspace{1mm}n>N_{\epsilon} \Rightarrow|x_n-x_m|<\epsilon$.
+\[|x_n-x_m|=\left|\frac{n+1}{n}-\frac{n+p+1}{n+p}\right|=\left|\frac{(n+p)(n+1)}{n(n+p)}-\frac{n(n+p+1)}{n(n+p)}\right|=\left|\frac{n^2+pn+n+1-n^2-np-n}{n(n+p)}\right|=\]
+\[\frac{1}{n(n+p)}<\frac{1}{n}<\epsilon \Rightarrow \frac{1}{\epsilon}<n\]
+By the Archimedean Property, such $n$ exists, and it follows that $x_n$ is Cauchy.
+
+\subsection*{b.}
+If $x_n = 1 + \frac{1}{2!} + \ldots + \frac{1}{n!}$, show that $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} N_{\epsilon} \in \mathbb{N}: \hspace{1mm} n,m>N_{\epsilon} \Rightarrow |x_n-x_m| < \epsilon$
+\[|x_n-x_m|=|x_n-x_{n+p}|=\left|1+\frac{1}{2!}+\ldots+\frac{1}{n!}-\left(1+\frac{1}{2!}+\ldots+\frac{1}{n!}+\ldots+\frac{1}{(n+p)!}\right)\right|=\]
+\[\frac{1}{(n+1)!}+\ldots+\frac{1}{(n+p)!} < \frac{p}{n!} \leq \frac{p}{n}<\epsilon\Rightarrow\frac{p}{\epsilon} < n\]
+By the Archimedean Property, such $n$ exists, and it follows that $x_n$ is Cauchy.
+
+\section*{3.5.3c}
+Suppose $\ln{n}$ is Cauchy. Then, $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} N_{\epsilon}\in\mathbb{N}:\hspace{1mm} n,m>N_{\epsilon}\Rightarrow |x_n-x_m| < \epsilon$. \\
+Let us fix $n>N_{\epsilon}$. $\ln{n}$ is well defined. Let us now examine $\lim_{m\to\infty} \ln{m}=\infty$. We can clearly see that $\lim_{m\to\infty}|x_n-x_m|=|\ln{n}-\infty|=\infty < \epsilon$, which is a contradiction. Thus, $x_n=\ln{n}$ must not be Cauchy.
+
+\section*{3.5.4}
+Suppose that $x_n$ and $y_n$ are Cauchy. Then it follows that:
+\[\forall \hspace{1mm} \epsilon > 0 \hspace{1mm} \exists \hspace{1mm} N_{\epsilon} : \hspace{1mm} n,m > N_{\epsilon} \Rightarrow |x_n-x_m| < \frac{\epsilon}{2}\]
+\[\forall \hspace{1mm} \epsilon > 0 \hspace{1mm} \exists \hspace{1mm} N_{\epsilon} : \hspace{1mm} i,k > N'_{\epsilon} \Rightarrow|y_i - y_k| < \frac{\epsilon}{2}\]
+Denote $z_n \coloneqq \{x_n + y_n, \hspace{1mm} n\in\mathbb{N}\}$. Let $M=\max\{N_{\epsilon}, N'_{\epsilon}\}$. We can see that
+\[|z_n - z_m| = |x_n+y_n-x_m-y_m| = |x_n-x_m+y_n-y_m| \leq |x_n-x_m| + |y_n-y_m| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon\]
+So we see that $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} M \in \mathbb{N}: \hspace{1mm} n,m > M \Rightarrow |z_n-z_m| < \epsilon$, so $z_n$ is Cauchy. \\
+\\
+Every Cauchy sequence is bounded, so let $X \coloneqq \sup{x_n}$ and $Y\coloneqq \sup{y_n}$. We see that 
+\[\forall\hspace{1mm}\epsilon > 0 \hspace{1mm} \exists \hspace{1mm} N_{\epsilon}: \hspace{1mm} n,m>N_{\epsilon} \Rightarrow |x_n-x_m| < \frac{\epsilon}{2\cdot X}\]
+\[\forall \epsilon > 0 \hspace{1mm} \exists \hspace{1mm} N'_{\epsilon}: \hspace{1mm} i,k>N'_{\epsilon} \Rightarrow |y_i-y_k|< \frac{\epsilon}{2 \cdot Y}\]
+Denote $z_n \coloneqq \{x_ny_n, \hspace{1mm} n\in\mathbb{N}\}$.
+\[|z_n-z_m|=|x_ny_n-x_my_m|=|x_ny_n-x_ny_m+x_ny_m-x_my_m|=|x_n(y_n-y_m)+y_m(x_n-x_m)| \leq\]
+\[x_n|y_n-y_m|+y_m|x_n-x_m|  < x_n\frac{\epsilon}{2\cdot X} + y_m\frac{\epsilon}{2\cdot Y} \leq \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon\]
+So wee see that, taking $M=\max\{N_{\epsilon}, N'_{\epsilon}\}$, $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} M \in\mathbb{N}: \hspace{1mm} n,m > M \Rightarrow |z_n-z_m| < \epsilon$, so $z_n$ is Cauchy.
+
+\section*{3.5.5}
+If $x_n=\sqrt{n}$, show that $x_n$ satisfies $\lim_{n\to\infty}|x_{n+1}-x_n| = 0$. \\
+\\
+Show that $\forall \hspace{1mm} \epsilon > 0, \hspace{1mm} \exists \hspace{1mm} N_{\epsilon}\in\mathbb{N}: \hspace{1mm} n>N_{\epsilon} \Rightarrow |x_{n+1} - x_n| < \epsilon^2 + 1$.
+\[|x_{n+1}-x_n|=|\sqrt{n+1}-\sqrt{n}| \leq |sqrt{n+1}|-|\sqrt{n}|=\sqrt{n+1}-\sqrt{n} < \sqrt{n+1} < \epsilon \Rightarrow n > \epsilon^2 + 1\]
+We see that such $n$ exists due to the Archimedean property, so it follows that $\lim_{n\to\infty}|x_{n+1}-x_n|=0$. \\
+\\
+Claim: $x_n=\sqrt{n}$ is not Cauchy. \\
+Suppose that $x_n$ is Cauchy. Then $\forall \hspace{1mm}\epsilon > 0, \hspace{1mm}\exists\hspace{1mm} N_{\epsilon} \in \mathbb{N}: \hspace{1mm} n,m > N_{\epsilon} \Rightarrow |x_n-x_m| < \epsilon$
 
 \end{document}
