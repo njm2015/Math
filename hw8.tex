@@ -13,6 +13,48 @@
 \begin{document}
 \maketitle
 
+\section*{1.}
+\subsection*{a.}
+\[|x^2-1|=|x+1||x-1|\]
+$|x-1|<1\Rightarrow -1 < x-1 < 1 \Rightarrow 1 < x+1 < 3$, so clearly, $x+1 < 3$ if $|x-1| < 1$. Now fix $|x-1| < \frac{1}{6}$. Since $|x-1| < \frac{1}{6} < 1 \Rightarrow |x+1| < 3$, we achieve $|x^2+1| = |x+1||x-1| < \left(\frac{1}{6}\right)(3) = \frac{1}{2}$. It suffices to say that $|x-1| < \frac{1}{6} \Rightarrow |x^2-1| < \frac{1}{2}$.
 
+\subsection*{d.}
+\[|x^3-1| = |x-1||x^2+x+1|\]
+\[|x-1| < 1 \Rightarrow -1 < x-1 < 1 \Rightarrow 0 < x < 2\]
+The x-coordinate of the vertex of the parabola $x^2+x+1$ is $-\frac{b}{2a}=-\frac{1}{2}$, so on the interval $0<x<2$, $x^2 + x + 1$ s strictly increasing. \\
+$0<x<2 \Rightarrow 1 < x^2+x+1 < 7$, so clearly, if $|x-1|<1$, $x^2+x+1<7$. \\
+\\
+Now take $|x-1| < \frac{1}{7n}$. We see that $|x^3-1|=|x-1||x^2+x+1|< \left(\frac{1}{7n}\right)(7)=\frac{1}{n}$.
+
+\subsection*{a.}
+\[\lim_{x\to2} \frac{1}{1-x}=-1\Leftrightarrow \hspace{1mm} \forall\hspace{1mm}\epsilon > 0 \hspace{1mm} \exists\hspace{1mm}\delta>0: 0 < |x-2| < \delta \Rightarrow \left|\frac{1}{1-x}+1\right|<\epsilon\]
+\[\left|\frac{1}{1-x}+1\right|< \epsilon \Rightarrow \left|\frac{1+1-x}{1-x}\right|=\left|\frac{x-2}{x-1}\right|=\frac{|x-2|}{|x-1|} < \epsilon\]
+Let us assume that $|x-2| < \frac{1}{2}$.
+\[|x-2| < \frac{1}{2} \Rightarrow -\frac{1}{2} < x-2 < \frac{1}{2} \Rightarrow \frac{3}{2} < x < \frac{5}{2} \Rightarrow x-1 > \frac{3}{2} - 1 = \frac{1}{2}\]
+Thus, $\left|\frac{x-2}{x-1}\right| < \frac{1}{2}|x-2|< \epsilon = |x-2| < 2\epsilon$, so set $\delta = \min\{\frac{1}{2},2\epsilon\}$.
+
+\subsection*{d.}
+\[\lim_{x\to1} \frac{x^2-x+1}{x+1}=\frac{1}{2} = \frac{1}{2}\Rightarrow \hspace{1mm} \forall\epsilon>0 \hspace{1mm} \exists\hspace{1mm}\delta>0:\hspace{1mm}0<|x-1|<\delta\Rightarrow\left|\frac{x^2-x+1}{x+1}-\frac{1}{2}\right| < \epsilon\]
+\[\left|\frac{x^2-x+1}{x+1}-\frac{1}{2}\right|=\left|\frac{2(x^2-x+1)}{2(x+1)}-\frac{x+1}{2(x+1)}\right|=\left|\frac{2x^2-2x+2-x-1}{2(x+1)}\right|=\]
+\[\left|\frac{2x^2-x+1}{2(x+1)}\right|=\left|\frac{(2x-1)(x-1)}{2(x+1)}\right|=\frac{1}{2}\frac{|2x-1||x-1|}{|x+1|}=\frac{|2x-1||x-1|}{|x+1|} < 2\epsilon\]
+Assume that $|x-1| < 1$. Then,
+\[-1<x-1<1\Rightarrow 0<x<1\Rightarrow -1<2x-1<1 \Rightarrow 1 < x+1 < 2\]
+So clearly, $|x-1|< 1 \Rightarrow 2x-1 < 1$ and $x+1 > 1$. \\
+\\
+$\left|\frac{x^2-x+1}{x+1}-\frac{1}{2}\right| < \epsilon \Rightarrow \frac{|2x-1||x-1|}{|x+1|} < \epsilon \Rightarrow |x-1| < \epsilon$, so set $\delta = \min\{1,\epsilon\}$.
+
+\section*{12.}
+\subsection*{a.}
+Let $x_n = \frac{1}{n^2},\hspace{1mm} n \in \mathbb{N}$ ($x_n\neq0$ and $\lim_{n\to\infty}x_n = 0$). Because $(f(x_n)=n)_{n=1}^\infty$ is unbounded, $\lim_{n\to\infty}f(n)$ does not exist $\Rightarrow \lim_{x\to0}f(x)$ does not exists by the divergence criterion.
+
+\subsection*{d.}
+Let $\sin\left(\frac{1}{x^2}\right)=1\Rightarrow \frac{1}{x^2} = \frac{\pi}{2} + 2\pi n \hspace{1mm} (n\in\mathbb{Z})$. \\
+Let $\sin\left(\frac{1}{x^2}\right)=-1\Rightarrow \frac{1}{x^2} = -\frac{\pi}{2} + 2\pi n \hspace{1mm} (n\in\mathbb{Z})$. \\
+\\
+Define the following sequence: $x_n\coloneqq \frac{1}{\sqrt{\frac{\pi}{2}+2\pi n}}$, $y_n\coloneqq \frac{1}{\sqrt{-\frac{\pi}{2}+2\pi n}}$. Clearly, $0 < -\frac{\pi}{2} + 2\pi n < \frac{\pi}{2}+2\pi n, \hspace{1mm} n>0$ so $x_n$ and $y_n$ are well defined and $\lim_{n\to\infty}x_n=\lim_{n\to\infty}y_n=0$. But $\lim_{n\to\infty}\sin(x_n)=1 \neq -1 = \lim_{n\to\infty}\sin(y_n)$. By the divergence criterion, $\lim_{x\to0}\sin\left(\frac{1}{x^2}\right)$ does not exist.
+
+\section*{15}
+\subsection*{a.}
+$f$ has a limit at $x=0$ because by the density of real numbers, $\forall \hspace{1mm}\epsilon>0$, every $V_{\epsilon}$ neighborhood of $f$ around 0 contains at least one rational and one irrational. the rational, $x_0$ and irrational, $x_1$ are clearly defined inside $V_{\epsilon}$. $|x-x_0| = |0-x_0|< \epsilon$ because $x_0$ is in the $\epsilon$ neighborhood of $f$ around 0, and $|x-x_1|=|0-0|=0 < \epsilon$, so all points in $V_{\epsilon}$ are $\epsilon$ close to 0. So 0 is a limit of $f$.
 
 \end{document}
