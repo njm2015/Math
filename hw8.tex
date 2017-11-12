@@ -13,7 +13,7 @@
 \begin{document}
 \maketitle
 
-\section*{1.}
+\section*{4.1.1}
 \subsection*{a.}
 \[|x^2-1|=|x+1||x-1|\]
 $|x-1|<1\Rightarrow -1 < x-1 < 1 \Rightarrow 1 < x+1 < 3$, so clearly, $x+1 < 3$ if $|x-1| < 1$. Now fix $|x-1| < \frac{1}{6}$. Since $|x-1| < \frac{1}{6} < 1 \Rightarrow |x+1| < 3$, we achieve $|x^2+1| = |x+1||x-1| < \left(\frac{1}{6}\right)(3) = \frac{1}{2}$. It suffices to say that $|x-1| < \frac{1}{6} \Rightarrow |x^2-1| < \frac{1}{2}$.
@@ -26,6 +26,7 @@ $0<x<2 \Rightarrow 1 < x^2+x+1 < 7$, so clearly, if $|x-1|<1$, $x^2+x+1<7$. \\
 \\
 Now take $|x-1| < \frac{1}{7n}$. We see that $|x^3-1|=|x-1||x^2+x+1|< \left(\frac{1}{7n}\right)(7)=\frac{1}{n}$.
 
+\section*{4.1.9}
 \subsection*{a.}
 \[\lim_{x\to2} \frac{1}{1-x}=-1\Leftrightarrow \hspace{1mm} \forall\hspace{1mm}\epsilon > 0 \hspace{1mm} \exists\hspace{1mm}\delta>0: 0 < |x-2| < \delta \Rightarrow \left|\frac{1}{1-x}+1\right|<\epsilon\]
 \[\left|\frac{1}{1-x}+1\right|< \epsilon \Rightarrow \left|\frac{1+1-x}{1-x}\right|=\left|\frac{x-2}{x-1}\right|=\frac{|x-2|}{|x-1|} < \epsilon\]
@@ -43,7 +44,7 @@ So clearly, $|x-1|< 1 \Rightarrow 2x-1 < 1$ and $x+1 > 1$. \\
 \\
 $\left|\frac{x^2-x+1}{x+1}-\frac{1}{2}\right| < \epsilon \Rightarrow \frac{|2x-1||x-1|}{|x+1|} < \epsilon \Rightarrow |x-1| < \epsilon$, so set $\delta = \min\{1,\epsilon\}$.
 
-\section*{12.}
+\section*{4.1.12}
 \subsection*{a.}
 Let $x_n = \frac{1}{n^2},\hspace{1mm} n \in \mathbb{N}$ ($x_n\neq0$ and $\lim_{n\to\infty}x_n = 0$). Because $(f(x_n)=n)_{n=1}^\infty$ is unbounded, $\lim_{n\to\infty}f(n)$ does not exist $\Rightarrow \lim_{x\to0}f(x)$ does not exists by the divergence criterion.
 
@@ -53,8 +54,23 @@ Let $\sin\left(\frac{1}{x^2}\right)=-1\Rightarrow \frac{1}{x^2} = -\frac{\pi}{2}
 \\
 Define the following sequence: $x_n\coloneqq \frac{1}{\sqrt{\frac{\pi}{2}+2\pi n}}$, $y_n\coloneqq \frac{1}{\sqrt{-\frac{\pi}{2}+2\pi n}}$. Clearly, $0 < -\frac{\pi}{2} + 2\pi n < \frac{\pi}{2}+2\pi n, \hspace{1mm} n>0$ so $x_n$ and $y_n$ are well defined and $\lim_{n\to\infty}x_n=\lim_{n\to\infty}y_n=0$. But $\lim_{n\to\infty}\sin(x_n)=1 \neq -1 = \lim_{n\to\infty}\sin(y_n)$. By the divergence criterion, $\lim_{x\to0}\sin\left(\frac{1}{x^2}\right)$ does not exist.
 
-\section*{15}
+\section*{4.1.15}
 \subsection*{a.}
 $f$ has a limit at $x=0$ because by the density of real numbers, $\forall \hspace{1mm}\epsilon>0$, every $V_{\epsilon}$ neighborhood of $f$ around 0 contains at least one rational and one irrational. the rational, $x_0$ and irrational, $x_1$ are clearly defined inside $V_{\epsilon}$. $|x-x_0| = |0-x_0|< \epsilon$ because $x_0$ is in the $\epsilon$ neighborhood of $f$ around 0, and $|x-x_1|=|0-0|=0 < \epsilon$, so all points in $V_{\epsilon}$ are $\epsilon$ close to 0. So 0 is a limit of $f$.
+
+\subsection*{b.}
+Given $c\neq0 \in\mathbb{R}$, there exist subsequences $x_n$ and $y_n$ in $\mathbb{Q}$ and $\mathbb{R}\setminus\mathbb{Q}$, respectively that converge to $c$ due to the density property of real numbers for rational and irrational numbers. So $\lim_{n\to\infty}x_n=\lim_{n\to\infty}y_n=c$. But $\lim_{n\to\infty}f(x_n)=c$ and $\lim_{n\to\infty}f(y_n)=0$. Thus, by the divergence criterion, $c$ is not a limit point of $f$.
+
+\section*{4.2.1}
+\subsection*{a.}
+\[\lim_{x\to1}(x+1)(2x+3)=\left(\lim_{x\to1}(x+1)\right)=2\cdot 5 = 10\]
+
+\subsection*{c.}
+\[\lim_{x\to2}\left(\frac{1}{x+1}-\frac{1}{2x}\right)=\lim_{x\to2}\left(\frac{1}{x+1}\right)-\lim_{x\to2}\left(\frac{1}{2x}\right)=\frac{1}{3}-\frac{1}{4}=\frac{1}{12}\]
+
+\section*{5.1.11}
+\[|x-y| < \delta\]
+\[|f(x)-f(y)|\leq K|x-y| < K\delta < \epsilon \Rightarrow \delta < \frac{\epsilon}{K}\]
+We have found that such $\delta$ exists for every $y\in\mathbb{R}$, so it must be true that $f$ is continuous at every point $c \in\mathbb{R}$.
 
 \end{document}
